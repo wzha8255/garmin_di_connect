@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: garmin_di_connect
+    database: christine-sandbox-env  
+    schema: garmin_di_connect  
+    tables:
+      - name: activities_summary

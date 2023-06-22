@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_customers
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_id
+        data_type: int
+        constraints:
+          - type: not_null
+          - type: primary_key
+          - type: check
+            expression: "customer_id > 0"
+      - name: customer_name
+        data_type: string
+      - name: first_transaction_date
+        data_type: date
+
+  - name: dim_customers_versioning
+    lastest_version: 1
+    config:
+      materialized: table
+    columns:
+      - name: customer_id
+        description: This is the unique id for customer 
+      - name: country
+        description: The country where the customer lives 
+
+    versions:
+      - v: 1
+
+      - v: 2
+        columns:
+          - include: all 
+            exclude: [country]

@@ -1,0 +1,93 @@
+NRMA_OFFPEAK_MIDWEEK:
+  outputs:
+    dev:
+      dataset: offpeak_midweek_models
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /Users/christinezhang/Documents/work/NRMA_Parks_and_Resorts/keys/mynrma-hp-td-dw-dev-cd6ddc8a-fa3d14c6421b.json
+      location: australia-southeast1
+      method: service-account
+      priority: interactive
+      project: mynrma-hp-td-dw-dev-cd6ddc8a
+      threads: 1
+      type: bigquery
+  target: dev
+cms_medicare_tutorial:
+  outputs:
+    dev:
+      dataset: us_medicare_2015
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /Users/christinezhang/Documents/dbt_projects/cms-medicare-dev-5cc768f2a4ee.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: cms-medicare-dev
+      threads: 1
+      type: bigquery
+  target: dev
+data_driven_marketing:
+  outputs:
+    dev:
+      dataset: offpeak_midweek_models
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /Users/christinezhang/Documents/work/NRMA_Parks_and_Resorts/keys/mynrma-hp-td-dw-dev-cd6ddc8a-fa3d14c6421b.json
+      location: australia-southeast1
+      method: sergclou
+      priority: interactive
+      project: mynrma-hp-td-dw-dev-cd6ddc8a
+      threads: 1
+      type: bigquery
+  target: dev
+databrick_dbt_lakehouse:
+  outputs:
+    dev:
+      dataproc_region: australia-southeast1
+      dataset: postgres_rds_public
+      gcs_bucket: dbt_python_models_tmp_bucket
+      location: australia-southeast1
+      method: oauth
+      project: howard-zhang-sandbox
+      threads: 4
+      type: bigquery
+  target: dev
+garmin_di_connect:
+  outputs:
+    dev:
+      dataset: garmin_di_connect
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: australia-southeast1
+      method: oauth
+      priority: interactive
+      project: christine-sandbox-env
+      threads: 1
+      type: bigquery
+  target: dev
+kogan_personalize_athena_dbt:
+  outputs:
+    dev:
+      aws_profile_name: 946161038568_Kogan-Developer-PermissionSet
+      database: awsdatacatalog
+      region_name: ap-southeast-2
+      s3_data_dir: s3://kogan-athena-query-result-destination/athena-query-results-dbt-processed/
+      s3_staging_dir: s3://kogan-athena-query-result-destination/athena-query-results-for-dbt/
+      schema: kogan_recommendation_processed
+      threads: 1
+      type: athena
+      work_group: primary
+  target: dev
+kogan_personalize_athena_dbt_v2:
+  outputs:
+    dev:
+      aws_profile_name: 946161038568_Kogan-Developer-PermissionSet
+      database: awsdatacatalog
+      region_name: ap-southeast-2
+      s3_data_dir: s3://kogan-athena-query-result-destination/athena-query-results-dbt-processed/
+      s3_staging_dir: s3://kogan-athena-query-result-destination/athena-query-results-for-dbt/
+      schema: kogan_recommendation_processed_2
+      threads: 1
+      type: athena
+      work_group: primary
+  target: dev

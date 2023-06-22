@@ -1,0 +1,1 @@
+select * from {{source('garmin_di_connect','raw_customers')}}

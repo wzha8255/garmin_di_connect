@@ -18,6 +18,8 @@ models:
       - name: first_transaction_date
         data_type: date
 
+
+
   - name: dim_customers_versioning
     lastest_version: 1
     config:
@@ -30,8 +32,5 @@ models:
 
     versions:
       - v: 1
-
       - v: 2
-        columns:
-          - include: all 
-            exclude: [country]
+

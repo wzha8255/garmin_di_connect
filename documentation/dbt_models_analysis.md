@@ -28,8 +28,9 @@ Description:
 
 SQL Code:
 
-
-
+<details>
+  <summary> SQL Code</summary>
+  
 ```sql
 # collapse-code [model_1]
 
@@ -143,7 +144,7 @@ SELECT
 FROM ty
 
 ```
-
+</details>
 
 ---
 ## Model 2: staging_au_catsales_ly
